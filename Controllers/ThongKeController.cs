@@ -25,9 +25,17 @@ namespace DOAN52.Controllers
         {
             var result = new ThongKeTrangChuViewModel();
 
-            var soLuongGiangVien= _context.TblCanBoGiangViens.Count();
-
+            var soLuongGiangVien = _context.TblCanBoGiangViens.Count();
             result.SoLuongGiangVien = soLuongGiangVien;
+
+            var soLuongKhoa = _context.TblPhongKhoas.Count();
+            result.SoLuongKhoa = soLuongKhoa;
+
+            var soLuongBoMon = _context.TblBoMonTrungTams.Count();
+            result.SoLuongBoMon = soLuongBoMon;
+
+            var soLuongPK = _context.TblCanBoGiangViens.Where(x=>x.MaPk=="CNTT").Count();
+            result.SoLuongPK = soLuongPK;
 
             return new OkObjectResult(result);
         }

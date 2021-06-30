@@ -137,7 +137,7 @@ namespace DOAN52.Authentication
                 entity.Property(e => e.DiaChi).HasColumnType("ntext");
 
                 entity.Property(e => e.DienThoai)
-                    .HasMaxLength(12)
+                    .HasMaxLength(20)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Dp1)
@@ -616,8 +616,8 @@ namespace DOAN52.Authentication
 
                 entity.Property(e => e.MaCbgv)
                     .HasColumnName("MaCBGV")
-                    .HasMaxLength(10)
-                    .IsUnicode(false);
+                    .HasMaxLength(256)
+                    .IsUnicode(true);
 
                 entity.Property(e => e.Status).HasColumnName("status");
 

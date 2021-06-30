@@ -27,7 +27,7 @@ namespace DOAN52.Authentication
         public int? PhanLoai { get; set; }
         [Column(TypeName = "ntext")]
         public string DiaChi { get; set; }
-        [StringLength(12)]
+        [StringLength(20)]
         public string DienThoai { get; set; }
         [StringLength(50)]
         public string Email { get; set; }

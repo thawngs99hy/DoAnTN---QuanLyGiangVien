@@ -12,7 +12,7 @@ namespace DOAN52.Authentication
         [Column("MaHD")]
         public long MaHd { get; set; }
         [Column("MaCBGV")]
-        [StringLength(10)]
+        [StringLength(256)]
         public string MaCbgv { get; set; }
         [Column("LoaiHD")]
         [StringLength(255)]
